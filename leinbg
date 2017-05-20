@@ -1,0 +1,13 @@
+#!/usr/bin/env php
+<?php
+
+if (file_exists(__DIR__.'/../../autoload.php')) {
+    $autoloadPath = __DIR__.'/../../autoload.php';
+} else {
+    $autoloadPath = __DIR__.'/vendor/autoload.php';
+}
+require_once $autoloadPath;
+
+$app = new \Symfony\Component\Console\Application('leinbgcli', '1.0.0');
+$app->add(new Leinbg\LeinbgCli\Command\MakeLaravelCommand);
+$app->run();

@@ -1,0 +1,19 @@
+{
+  "name": "leinbg/leinbgcli",
+  "require": {
+    "symfony/console": "~3.1",
+    "symfony/process": "~3.1",
+    "guzzlehttp/guzzle": "~6.0"
+  },
+  "bin" : [
+    "leinbg"
+  ],
+  "autoload": {
+    "psr-4": {
+      "Leinbg\\LeinbgCli\\": "src/"
+    }
+  },
+  "config": {
+    "bin-dir": "./bin/"
+  }
+}
